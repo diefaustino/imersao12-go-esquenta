@@ -1,4 +1,4 @@
-Imersão fullcycle 21/08/2023.
+Imersão fullcycle 21/08/2023
 Aplicação GO, com api http comunicando apache kafka e banco de dados mysql.
 apos subir o docker-compose:
 1 - acessar mysql para criar tabela:
@@ -27,9 +27,12 @@ teste via linha de comando:
 Teste criar registro no mysql:
     insert into products values ('abc','produto manual',250);
 
-Teste produzir evento no kafka:
+Teste produzir evento no kafka via terminal:
     kafka-console-producer --bootstrap-server=localhost:9092 --topic=product
 	> {"name": "My Product kafka", "price": 300}
 
-
+Teste produzir evento no kafka via control center:
+    acessar http://<hostname>:9021
+    topics >> product (topico criado anteriormente) >> message >> produce new message
+    
 
